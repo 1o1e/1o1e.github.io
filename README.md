@@ -15,7 +15,7 @@ A documentation site built with Docusaurus, React, and MDX for publishing styled
 
 ### Prerequisites
 
-- Node.js version 20.0 or above
+- Node.js version 22.0 or above
 
 ### Installation
 
