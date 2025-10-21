@@ -20,18 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Setup nvm
-        run: |
-          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-          export NVM_DIR="$HOME/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-          nvm install 22
-          nvm use 22
-          echo "$HOME/.nvm/versions/node/$(nvm current)/bin" >> $GITHUB_PATH
-      
-      - name: Verify Node.js version
-        run: node --version
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
       
       - name: Install dependencies
         run: npm ci
