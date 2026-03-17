@@ -22,6 +22,8 @@ const config: Config = {
   organizationName: '1o1e', // Usually your GitHub org/user name.
   projectName: '1o1e.github.io', // Usually your repo name.
 
+  plugins: [require.resolve('./plugins/blog-tag-data')],
+
   onBrokenLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
