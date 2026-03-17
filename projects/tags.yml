@@ -1,0 +1,24 @@
+drafts:
+  label: 'Drafts'
+  permalink: '/drafts'
+  description: 'Work in progress'
+
+community:
+  label: 'Community'
+  permalink: '/community'
+  description: 'Community-related projects and posts'
+
+open-source:
+  label: 'Open Source'
+  permalink: '/open-source'
+  description: 'Open source contributions and projects'
+
+tutorial:
+  label: 'Tutorial'
+  permalink: '/tutorial'
+  description: 'How-to guides and tutorials'
+
+essay:
+  label: 'Essay'
+  permalink: '/essay'
+  description: 'Long-form essays and articles'

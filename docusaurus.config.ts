@@ -14,15 +14,12 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  // Set the production url of your site here
-  url: 'https://azul-rojo.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/1o1e.github.io/',
+  url: 'https://1o1e.github.io',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'azul-rojo', // Usually your GitHub org/user name.
+  organizationName: '1o1e', // Usually your GitHub org/user name.
   projectName: '1o1e.github.io', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -39,14 +36,19 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          routeBasePath: 'docs',
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/azul-rojo/1o1e.github.io/tree/main/',
+        docs: false,
+        blog: {
+          path: 'projects',
+          routeBasePath: 'projects',
+          blogTitle: 'Projects',
+          blogDescription: 'Projects, articles, and essays by 1o1e',
+          blogSidebarCount: 10,
+          blogSidebarTitle: 'Recent projects',
+          postsPerPage: 10,
+          showReadingTime: true,
+          tags: 'tags.yml',
+          onInlineTags: 'warn',
         },
-        blog: false, // Disable blog functionality
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -55,26 +57,32 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    // TODO: Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
+    docs: {
+      sidebar: {
+        hideable: false,
+        autoCollapseCategories: false,
+      },
+    },
     navbar: {
       title: '1o1e',
-      logo: {
-        alt: '1o1e Logo',
-        src: 'img/logo.svg',
-      },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'docsSidebar',
-          position: 'left',
-          label: 'Docs',
+          to: '/projects',
+          label: 'Projects',
+          position: 'right',
         },
         {
-          href: 'https://github.com/azul-rojo/1o1e.github.io',
+          to: '/projects/tags',
+          label: 'Topics',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/1o1e/1o1e.github.io',
           label: 'GitHub',
           position: 'right',
         },
@@ -84,16 +92,24 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Documentation',
+          title: 'Links',
           items: [
             {
-              label: 'Get Started',
-              to: '/docs/intro',
+              label: 'Home',
+              to: '/',
+            },
+            {
+              label: 'Projects',
+              to: '/projects',
+            },
+            {
+              label: 'Topics',
+              to: '/projects/tags',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Socials',
           items: [
             {
               label: 'GitHub',
