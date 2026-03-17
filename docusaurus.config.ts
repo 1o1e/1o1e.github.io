@@ -89,7 +89,7 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  url: 'https://1o1e.github.io',
+  url: 'https://1o13.com',
   baseUrl: '/',
 
   // GitHub pages deployment config.
